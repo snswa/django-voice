@@ -9,6 +9,7 @@
 <h1>Feedback</h1>
 
 <form action="{% url djangovoice_submit %}" method="post">
+{% csrf_token %}
 <table>
 {% for field in form %}
     {% include "djangovoice/includes/fields.html" %}

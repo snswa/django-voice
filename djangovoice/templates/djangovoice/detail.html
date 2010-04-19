@@ -31,11 +31,13 @@
     <div class="clear"></div>
     <div id="vote-down">
         <form class="vote-button" method="post" action="{{ feedback.get_absolute_url }}down/">
+            {% csrf_token %}
             <input class="button" type="submit" name="up" value="&minus;1">
         </form>
     </div>
     <div id="vote-up">
         <form class="vote-button" method="post" action="{{ feedback.get_absolute_url }}up/">
+            {% csrf_token %}
             <input class="button" type="submit" name="down" value="+1">
         </form>
     </div>
@@ -90,14 +92,15 @@
 <h2>Leave a comment</h2>
 {% get_comment_form for feedback as form %}
     <form action="{% comment_form_target %}" method="POST"> 
+    {% csrf_token %}
     <input type="hidden" name="next" value="{{ feedback.get_absolute_url }}" />
-{{ form.comment }} 
-{{ form.honeypot }} 
-{{ form.content_type }} 
-{{ form.object_pk }} 
-{{ form.timestamp }} 
-{{ form.security_hash }}
-<br /><input type="submit" value="Post comment" id="id_submit" />
+    {{ form.comment }} 
+    {{ form.honeypot }} 
+    {{ form.content_type }} 
+    {{ form.object_pk }} 
+    {{ form.timestamp }} 
+    {{ form.security_hash }}
+    <br /><input type="submit" value="Post comment" id="id_submit" />
 </form> 
  {% endif %}
 

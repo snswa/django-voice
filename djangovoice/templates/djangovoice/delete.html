@@ -8,6 +8,7 @@
 <p>There is <strong>no way to undo this!</strong></p>
 
 <form action="" method="post">
+    {% csrf_token %}
     <p><input type="submit" value="{% trans "Delete Permenantly" %}" /> or <a href='../'>leave everything as it is</a>.</p>
 </form>
 {% endblock %}
