@@ -24,6 +24,12 @@ ol {
     list-style-type: decimal;
 }
 
+hr {
+    border-width: 0 0 1px 0;
+    border-color: #dfe5e7;
+    border-style: solid;
+}
+
 
 body, p, h1, h2, h3, h4, ol, ul, li, form, input, table, td, th, fieldset, pre {
     font-family: Helvetica, Arial, Verdana, sans-serif;
@@ -605,4 +611,40 @@ form td.label .required {
 
 .form-cancel {
     margin-left: 15px;
+}
+
+/***** comments *****/
+div.message .avatar {
+    float: left;
+    padding: 10px 4px 4px 4px;
+    vertical-align: text-bottom;
+    line-height: 0;
+}
+div.message .content {
+}
+div.message .content h2 {
+    padding: 0;
+    line-height: 22px;
+}
+div.message .content .details {
+    padding: 0 0 5px 0;
+    font-size: 11px;
+    font-weight: normal;
+    color: #888888;
+    vertical-align: top;
+    line-height: 11px;
+    text-align: left;
+}
+div.message {
+    border-width: 0 0 1px 0;
+    border-color: #d9d9d9;
+    border-style: solid;
+    padding: 5px 0 0 0;
+}
+div.message-content {
+    padding: 10px 40px 10px 100px;
+}
+
+.comment .details {
+    text-align: left;
 }
