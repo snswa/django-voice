@@ -128,7 +128,7 @@ def delete(request, object_id):
         return Http404
     if request.method == 'POST':
         feedback.delete()
-        return HttpResponseRedirect(reverse('feedback_home'))
+        return HttpResponseRedirect(reverse('djangovoice_home'))
     return render_to_response('djangovoice/delete.html', {'feedback':feedback}, context_instance=RequestContext(request))
 
 
